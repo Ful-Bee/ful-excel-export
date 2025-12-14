@@ -8,7 +8,7 @@ High-Performance Pure Frontend Excel Export Library
 
 ### 导出效果示例 / Export Result Example
 
-![Excel Export Result](../assets/public/excel-temp1.png)
+![Excel Export Result](./assets/public/excel-temp1.png)
 
 _支持样式、富文本、合并单元格、边框等完整 Excel 功能_
 
