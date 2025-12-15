@@ -435,12 +435,25 @@
   </head>
   <body>
     <div class="container">
-      <div class="lang-switch" style="text-align: right; margin-bottom: 10px;">
-        <a href="demo.en.html" style="color: white; text-decoration: none; padding: 6px 12px; background: rgba(255, 255, 255, 0.2); border-radius: 6px; font-size: 14px;">English</a>
+      <div class="lang-switch" style="text-align: right; margin-bottom: 10px">
+        <a
+          href="demo.en.html"
+          style="
+            color: white;
+            text-decoration: none;
+            padding: 6px 12px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            font-size: 14px;
+          "
+          >English</a
+        >
       </div>
 
       <div class="header">
-        <h1>📊 Ful-ExcelExport <span class="open-source-badge">开源版</span></h1>
+        <h1>
+          📊 Ful-ExcelExport <span class="open-source-badge">开源版</span>
+        </h1>
         <p>100% 纯前端 Excel 导出 · 无需后端服务器</p>
         <div class="feature-badges">
           <span class="feature-badge frontend">
@@ -601,7 +614,7 @@
             <strong>零依赖安装</strong> - 只需
             <code
               style="background: #f3f4f6; padding: 2px 6px; border-radius: 4px"
-              >npm install ful-excel-export</code
+              >npm install Ful-ExcelExport</code
             >，无需安装任何其他包。 所有功能已内置，直接使用即可。
           </div>
         </div>
@@ -680,8 +693,8 @@
                 <small style="color: #888">mailto/http</small></span
               >
             </label>
-            <label 
-              class="checkbox-item pro-disabled pro-feature" 
+            <label
+              class="checkbox-item pro-disabled pro-feature"
               data-pro="merge"
               title="💎 Pro 功能 - 联系获取报价"
             >
@@ -691,8 +704,8 @@
                 <small style="color: #888">rowSpan/colSpan</small></span
               >
             </label>
-            <label 
-              class="checkbox-item pro-disabled pro-feature" 
+            <label
+              class="checkbox-item pro-disabled pro-feature"
               data-pro="rowcol"
               title="💎 Pro 功能 - 联系获取报价"
             >
@@ -702,8 +715,8 @@
                 <small style="color: #888">height/width</small></span
               >
             </label>
-            <label 
-              class="checkbox-item pro-disabled pro-feature" 
+            <label
+              class="checkbox-item pro-disabled pro-feature"
               data-pro="image"
               title="💎 Pro 功能 - 联系获取报价"
             >
@@ -829,7 +842,9 @@
               <li>✅ 超链接</li>
               <li>✅ 技术支持</li>
             </ul>
-            <div style="color: #b45309; font-weight: 600">联系获取报价<br/>📧 634688344@qq.com</div>
+            <div style="color: #b45309; font-weight: 600">
+              联系获取报价<br />📧 634688344@qq.com
+            </div>
           </div>
           <!-- 技术咨询 -->
           <div
@@ -866,8 +881,12 @@
               <li>📚 技术培训</li>
             </ul>
             <div style="color: #b45309; font-weight: 600">扫码咨询 ↓</div>
-            <div style="margin-top: 15px; text-align: center;">
-              <img src="./assets/user/wechat.jpg" width="150" style="border-radius: 8px;" />
+            <div style="margin-top: 15px; text-align: center">
+              <img
+                src="./assets/user/wechat.jpg"
+                width="150"
+                style="border-radius: 8px"
+              />
             </div>
           </div>
         </div>
@@ -910,7 +929,7 @@
               最简单的支持方式
             </div>
             <a
-              href="https://github.com/fulbee/Ful-ExcelExport"
+              href="https://github.com/Ful-Bee/Ful-ExcelExport"
               target="_blank"
               style="
                 display: inline-block;
@@ -938,8 +957,12 @@
             <div style="font-weight: 700; color: #be185d; margin-bottom: 10px">
               请我喝杯咖啡
             </div>
-            <div style="margin-top: 10px; text-align: center;">
-              <img src="./assets/user/aliPay.jpg" width="150" style="border-radius: 8px;" />
+            <div style="margin-top: 10px; text-align: center">
+              <img
+                src="./assets/user/aliPay.jpg"
+                width="150"
+                style="border-radius: 8px"
+              />
             </div>
           </div>
         </div>
@@ -1099,7 +1122,11 @@
 
         log(`开始导出: ${rowCount.toLocaleString()} 行 × ${colCount} 列`);
         log(`文件名: ${fileName}`);
-        log(`样式: ${includeStyles ? "✓" : "✗"} | 富文本: ${includeRichText ? "✓" : "✗"}`);
+        log(
+          `样式: ${includeStyles ? "✓" : "✗"} | 富文本: ${
+            includeRichText ? "✓" : "✗"
+          }`
+        );
 
         // 创建导出器实例
         const exporter = new FulExcelExport({ fileName });
@@ -1167,7 +1194,10 @@
                 break;
               case 5:
                 cell = {
-                  value: `2020-${String((i % 12) + 1).padStart(2, "0")}-${String((i % 28) + 1).padStart(2, "0")}`,
+                  value: `2020-${String((i % 12) + 1).padStart(
+                    2,
+                    "0"
+                  )}-${String((i % 28) + 1).padStart(2, "0")}`,
                 };
                 break;
               case 6:
@@ -1222,7 +1252,8 @@
             const usedHeap = parseFloat(memory.usedHeap) || 0;
             const totalHeap = parseFloat(memory.totalHeap) || 0;
             const limit = parseFloat(memory.limit) || totalHeap;
-            const memPercent = limit > 0 ? Math.min(100, (usedHeap / limit) * 100) : 0;
+            const memPercent =
+              limit > 0 ? Math.min(100, (usedHeap / limit) * 100) : 0;
 
             memUsedHeap.textContent = usedHeap;
             memTotalHeap.textContent = totalHeap;
@@ -1251,7 +1282,7 @@
             }
 
             await worksheet.addRows(pageData);
-            
+
             // 每10页输出一次日志
             if ((page + 1) % 10 === 0 || page === totalPages - 1) {
               log(`已写入 ${page + 1} / ${totalPages} 页`);
@@ -1263,7 +1294,12 @@
           const result = await exporter.export();
 
           console.log("导出成功:", result);
-          log(`✅ 导出成功！行数: ${result.rows.toLocaleString()}, 大小: ${result.sizeMB}MB`, "success");
+          log(
+            `✅ 导出成功！行数: ${result.rows.toLocaleString()}, 大小: ${
+              result.sizeMB
+            }MB`,
+            "success"
+          );
           alert(
             `导出成功！\n行数: ${result.rows.toLocaleString()}\n工作表: ${
               result.sheets

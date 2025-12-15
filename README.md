@@ -4,6 +4,16 @@
 
 High-Performance Pure Frontend Excel Export Library
 
+## 0. 获取代码 / Get the Code
+
+```bash
+# 克隆仓库 / Clone the repository
+git clone https://github.com/Ful-Bee/Ful-ExcelExport.git
+
+# 进入项目目录 / Enter project directory
+cd Ful-ExcelExport
+```
+
 ![Ful-ExcelExport Demo](./assets/public/proDemoPic.png)
 
 ### 导出效果示例 / Export Result Example
@@ -21,8 +31,8 @@ _Supports styles, rich text, merged cells, borders and full Excel features_
 ### 方式一：使用 npx serve（推荐）
 
 ```bash
-# 进入 demo 目录
-cd demo
+# 进入项目目录（如果还没进入）
+cd Ful-ExcelExport
 
 # 启动本地服务器
 npx serve .
